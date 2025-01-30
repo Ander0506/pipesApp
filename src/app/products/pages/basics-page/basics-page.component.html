@@ -1,0 +1,54 @@
+<p-panel header="Pipes Básicos" class="p-2">
+  <p>
+    Pipes incluídos en Angular - Usualmente en el Common Module
+  </p>
+</p-panel>
+
+<div class="grid grid-cols-3 gap-4">
+  <p-card header="uppercase">
+    {{ nameLower | uppercase }}
+  </p-card>
+  <p-card header="lowercase">
+    {{ nameUpper | lowercase }}
+  </p-card>
+  <p-card header="titlecase">
+    {{ fullName | titlecase }}
+  </p-card>
+</div>
+
+<div class="grid grid-cols-2 gap-4 mt-4">
+  <p-card header="Date">
+    <ol>
+      <li>fecha</li>
+      <li>fecha | date</li>
+      <li>fecha | date:'short'</li>
+      <li>fecha | date:'long'</li>
+      <li>fecha | date:'MMMM'</li>
+      <li>fecha | date:'MMMM dd, yyyy'</li>
+    </ol>
+    <hr class="my-2">
+    <ol>
+      <li>fecha | date:'long':'GMT-4'</li>
+      <li>fecha | date:'long':'GMT-6'</li>
+      <li>fecha | date:'long':'GMT-5':'es-CO'</li>
+      <li>fecha | date:'long':'GMT-5':'fr-CA'</li>
+    </ol>
+  </p-card>
+  <p-card header="DatePipe">
+    <ol>
+      <li>{{ customDate }}</li>
+      <li>{{ customDate | date }}</li>
+      <li>{{ customDate | date:'short' }}</li>
+      <li>{{ customDate | date:'long' }}</li>
+      <li>{{ customDate | date:'MMMM' }}</li>
+      <li>{{ customDate | date:'MMMM dd, yyyy' }}</li>
+    </ol>
+    <hr class="my-2">
+    <ol>
+      <li>{{ customDate | date:'long':'GMT-4' }}</li>
+      <li>{{ customDate | date:'long':'GMT-6' }}</li>
+      <li>{{ customDate | date:'long':'GMT-5':'es-CO' }}</li>
+      <li>{{ customDate | date:'long':'GMT-5':'fr-CA' }}</li>
+    </ol>
+  </p-card>
+</div>

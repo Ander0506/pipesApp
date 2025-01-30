@@ -1,4 +1,25 @@
+/* @import "tailwindcss"; */
+/* @import "primeicons/primeicons.css"; */
+
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
+body {
+  margin: 0;
+  padding: 2rem;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: light-dark(var(--p-surface-0), var(--p-surface-950));
+}
+
+@layer tailwind-theme, tailwind-base, primeng, tailwind-utilities;
+
+@import "tailwindcss/theme.css" layer(tailwind-theme);
+@import "tailwindcss/preflight.css" layer(tailwind-base);
+@import "tailwindcss/utilities.css" layer(tailwind-utilities);
